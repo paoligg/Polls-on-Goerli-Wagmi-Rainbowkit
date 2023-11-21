@@ -25,7 +25,6 @@ function ReadPolls() {
     functionName: 'getPolls',
   });
 
-  polls ? console.log(polls[0].voters) : console.log("no polls");
 
   return (
     <div>

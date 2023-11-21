@@ -4,8 +4,9 @@ import { ReadContract } from '../components/ReadContract';
 import { ReadContracts } from '../components/ReadContracts';
 import { CreateVote } from '../components/CreateVote';
 import { PollDisplay } from '../components/PollDisplay';
+import React from 'react';
 
-export function Page() {
+const Page: React.FC = () =>{
   return (
     <div className="bg-black text-white p-8">
       <h1 className="text-4xl font-bold mb-4">Let's Poll</h1>
