@@ -29,13 +29,13 @@ function DisplayPolls() {
   return (
     <div>
       <button
-        className={`bg-${showVotersPoll ? 'gray' : 'blue'}-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded`}
+        className={`bg-${showVotersPoll ? 'gray' : 'green'}-500 hover:bg-green-400 text-white font-bold py-2 px-4 rounded`}
         onClick={handleAllVotes}
       >
         All Polls
       </button>
       <button
-        className={`bg-${showVotersPoll ? 'blue' : 'gray'}-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded`}
+        className={`bg-${showVotersPoll ? 'green' : 'gray'}-500 hover:bg-green-400 text-white font-bold py-2 px-4 rounded`}
         onClick={handleYourVotes}
       >
         Your Polls

@@ -26,15 +26,15 @@ export function ReadContract() {
   const [pollnumber, setPollNumber] = useState<number>(0);
 
   return (
-    <div>
+    <div className='bg-gray-800 rounded mt-4'>
+      <div className='text-center'>
       <input
         type="number"
         onChange={(e) => setPollNumber(parseInt(e.target.value))}
         defaultValue={0}
-        className="bg-gray-800 text-white p-2 rounded"
+        className="bg-gray-600 text-white p-2 rounded w-16 mt-4 "
       />
-      <div className="mt-4">
-        <ReadPoll index={pollnumber} />
+       <ReadPoll index={pollnumber} />
       </div>
     </div>
   );
@@ -57,8 +57,8 @@ function ReadPoll({ index }: { index: number }) {
   useEffect(() => {
     if (data && data.length > 0) {
       setPoll(data[0]);
-      setStartTime(new Date(Number(data[1]) * 1000).toString());
-      setEndTime(new Date(Number(data[2]) * 1000).toString());
+      setStartTime(new Date(Number(data[1]) * 1000).toLocaleString());
+      setEndTime(new Date(Number(data[2]) * 1000).toLocaleString());
       setLimit(Number(data[2]));
       setOptions(data[5].toString().split(","));
       setVoteCount(data[6].toString().split(","));
@@ -80,15 +80,17 @@ function ReadPoll({ index }: { index: number }) {
   };
 
   return (
-    <div className="mt-8 bg-gray-800 text-white p-4 rounded ">
+    <div className="mt-4 bg-gray-800 text-white p-4 rounded ">
       {data ? (
         <div>
           <h2 className="text-2xl font-bold mb-4"> {poll}</h2>
-          <p>End Time: {endTime}</p>
+          <p>End Time : {endTime}</p>
           <div className="mt-4">
             {options.map((option, optionindex) => (
               <div key={optionindex} className={`mb-2 p-2 rounded`}>
-                {option} : {voteCount[optionindex]}
+                <span>
+                  {option} : <span className="text-lg font-bold">{voteCount[optionindex]}</span>
+                </span>
                 <button
                   onClick={async () => await handleVote(index, optionindex)}
                   disabled={isVotingDisabled()}

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^1.0.0",
+    "chart.js": "^4.4.0",
     "encoding": "^0.1.13",
     "next": "^13.4.0",
     "pino-pretty": "^10.2.3",

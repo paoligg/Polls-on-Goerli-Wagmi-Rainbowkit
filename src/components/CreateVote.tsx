@@ -64,42 +64,47 @@ function ReadPolls() {
   };
 
   return (
-    <div>
-      <label className="mb-4 block">
-        Poll Description:
+    <div className="mt-4 bg-gray-800 text-white p-4 rounded ">
+      <label className="mb-4 block font-bold">
+        Poll Description :
+        <span className="inline-block ml-4"></span>
+
         <input
           type="text"
           value={polldesc}
           onChange={(e) => setPolldesc(e.target.value)}
-          className="bg-gray-800 text-white p-2 rounded"
+          className="bg-gray-600 text-white p-2 rounded"
         />
       </label>
       <label className="mb-4 block">
-        End Time:
+      <span className="font-bold">End Time : </span>
+        <span className="inline-block ml-4"></span>
         <input
           type="number"
           value={day}
           onChange={handleDayChange}
-          className="bg-gray-800 text-white p-2 rounded mr-2"
+          className="bg-gray-600 text-white p-2 rounded mr-2 w-16"
         />
         days
+        <span className="inline-block ml-4"></span>
         <input
           type="number"
           value={hour}
           onChange={handleHourChange}
-          className="bg-gray-800 text-white p-2 rounded mr-2"
+          className="bg-gray-600 text-white p-2 rounded mr-2 w-16"
         />
         hours
+        <span className="inline-block ml-4"></span>
         <input
           type="number"
           value={minute}
           onChange={handleMinuteChange}
-          className="bg-gray-800 text-white p-2 rounded"
+          className="bg-gray-600 text-white p-2 rounded mr-2 w-16"
         />
         minutes
       </label>
-      <label className="mb-4 block">
-        Options:
+      <label className="mb-4 block ">
+      <span className="font-bold">Options : </span>
         <ul>
           {options.map((option, index) => (
             <li key={index}>
@@ -107,7 +112,7 @@ function ReadPolls() {
                 type="text"
                 value={option}
                 onChange={(e) => handleOptionChange(index, e.target.value)}
-                className="bg-gray-800 text-white p-2 rounded mr-2"
+                className="bg-gray-600 text-white p-2 rounded mt-2"
               />
             </li>
           ))}
