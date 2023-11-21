@@ -1,7 +1,6 @@
 import { ConnectButton } from '../components/ConnectButton';
 import { Connected } from '../components/Connected';
 import { ReadContract } from '../components/ReadContract';
-import { ReadContracts } from '../components/ReadContracts';
 import { CreateVote } from '../components/CreateVote';
 import { PollDisplay } from '../components/PollDisplay';
 import React from 'react';
