@@ -61,14 +61,14 @@ function ReadPoll({ index }: { index: number }) {
       setStartTime(new Date(Number(data[1]) * 1000).toString());
       setEndTime(new Date(Number(data[2]) * 1000).toString());
       setLimit(Number(data[2]));
-      setOptions(data[5].toString().split(','));
-      setVoteCount(data[6].toString().split(','));
+      setOptions(data[5].toString().split(","));
+      setVoteCount(data[6].toString().split(","));
     }
   }, [data]);
 
   const { write, error } = useContractWrite({
     ...wagmiContractConfig,
-    functionName: 'vote',
+    functionName: "vote",
   });
 
   const handleVote = async (pollid: number, optionIndex: number) => {

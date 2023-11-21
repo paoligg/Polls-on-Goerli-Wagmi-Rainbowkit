@@ -14,7 +14,7 @@ export function CreateVote() {
 function ReadPolls() {
   const { write } = useContractWrite({
     ...wagmiContractConfig,
-    functionName: 'createNewPoll',
+    functionName: "createNewPoll",
   });
 
   const [polldesc, setPolldesc] = useState('');
@@ -25,7 +25,7 @@ function ReadPolls() {
   const [options, setOptions] = useState<string[]>([]);
 
   const handleAddOption = () => {
-    setOptions([...options, '']);
+    setOptions([...options, ""]);
   };
 
   const handleOptionChange = (index: number, value: string) => {
