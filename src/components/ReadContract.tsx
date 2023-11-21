@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import { useContractRead, useContractWrite } from 'wagmi';
 import { wagmiContractConfig } from './contracts';
-import { Vote } from '@thirdweb-dev/sdk';
 
 const getRandomColor = () => {
   const colors = [
