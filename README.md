@@ -1,17 +1,45 @@
-This is a [wagmi](https://wagmi.sh) + [RainbowKit](https://rainbowkit.com) + [Next.js](https://nextjs.org) project bootstrapped with [`create-wagmi`](https://github.com/wagmi-dev/wagmi/tree/main/packages/create-wagmi)
+# Polls on Sepolia using Wagmi Rainbowkit
 
-# Getting Started
+Welcome to my repository, a decentralized voting system deployed on Vercel. The live site can be accessed on this link :
 
-Run `npm run dev` in your terminal, and then open [localhost:3000](http://localhost:3000) in your browser.
+https://polls-tawny.vercel.app/.
 
-Once the webpage has loaded, changes made to files inside the `src/` directory (e.g. `src/pages/index.tsx`) will automatically update the webpage.
+## Overview
 
-# Learn more
+The smart contract is deployed on the Sepolia network at this address: [`0x0a291A2c2D0253Ad25540CfD9C4053C3258D10E4`](https://sepolia.etherscan.io/address/0x0a291A2c2D0253Ad25540CfD9C4053C3258D10E4#code).
+You can find the code in the SmartContractPoll/ folder.
 
-To learn more about [Next.js](https://nextjs.org) or [wagmi](https://wagmi.sh), check out the following resources:
+## Features
 
-- [wagmi Documentation](https://wagmi.sh) – learn about wagmi Hooks and API.
-- [wagmi Examples](https://wagmi.sh/examples/connect-wallet) – a suite of simple examples using wagmi.
-- [RainbowKit Documentation](https://rainbowkit.com/docs/introduction) – learn more about RainbowKit (configuration, theming, advanced usage, etc).
-- [Next.js Documentation](https://nextjs.org/docs) learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Propose a Vote:**
+   - Users can create new votes with various parameters.
+
+2. **Vote on Existing Votes:**
+   - Participants can cast their votes on existing polls.
+
+3. **Live Result Tracking:**
+   - Real-time results are available for each active vote.
+
+4. **Vote Security:**
+   - Ensures that users cannot vote more than once.
+
+5. **Wallet Interactions:**
+   - Requires a wallet (e.g., Metamask) for site access.
+
+6. **Information Displays:**
+   - Lists all votes, votes you've engaged with, and currently active votes.
+
+7. **Get specific Poll Information**
+   - Access a poll information with its ID.
+
+## Development
+
+You too can create your app by forking this repo, and using 
+
+``` npm install ``` 
+
+``` npm run dev ``` 
+
+and then you can access your app at ```localhost:3000``` 
+
+
